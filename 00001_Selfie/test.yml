@@ -1,2 +1,2 @@
 type: display
-query: select * from publicaciones;
+query: select * from publicaciones p, usuarios u where p.duenio = u.id_usr;
