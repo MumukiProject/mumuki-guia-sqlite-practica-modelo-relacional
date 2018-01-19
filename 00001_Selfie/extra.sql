@@ -3,7 +3,7 @@ CREATE TABLE usuarios (id_usr INTEGER PRIMARY KEY, nombre_usr TEXT, foto_perfil_
 CREATE TABLE publicaciones (id_publicacion INTEGER PRIMARY KEY, 
 foto_video_url TEXT, 
 duenio INTEGER NOT NULL, 
-es_temporal BOOLEAN NOT NULL CHECK (es_efimero IN (0,1)),
+es_temporal BOOLEAN NOT NULL CHECK (es_temporal IN (0,1)),
 FOREIGN KEY (duenio) REFERENCES usuarios(id_usr));
 
 INSERT INTO usuarios (1, "pepe", "url_pepe");
