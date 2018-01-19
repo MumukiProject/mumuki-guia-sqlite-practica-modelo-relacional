@@ -61,7 +61,7 @@ Tenemos un modelo inicial:
       }
     },
     "likes": {
-      "publicacion":{
+      "publicacion": {
         "type": "Integer",
         "pk": true,
         "fk": {
@@ -69,13 +69,34 @@ Tenemos un modelo inicial:
           "type": "many_to_one"
         }
       },
-      "stalker":{
+      "stalker": {
         "type": "Integer",
         "pk": true,
         "fk": {
           "to": { "entity": "usuarios", "column": "id_usr" },
           "type": "many_to_one"
         }
+      }
+    },
+    "comentarios": {
+      "publicacion": {
+        "type": "Integer",
+        "pk": true,
+        "fk": {
+          "to": { "entity": "publicaciones", "column": "id_publicacion" },
+          "type": "many_to_one"
+        }
+      },
+      "stalker": {
+        "type": "Integer",
+        "pk": true,
+        "fk": {
+          "to": { "entity": "usuarios", "column": "id_usr" },
+          "type": "many_to_one"
+        }
+      },
+      "comentario": {
+        "type": "Text"
       }
     }
   }'>
