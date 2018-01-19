@@ -27,7 +27,8 @@ CREATE TABLE comentarios (id_publicacion INTEGER NOT NULL,
   FOREIGN KEY (id_stalker) REFERENCES usuarios(id_usuario), 
   PRIMARY KEY (id_publicacion, id_stalker));
 
-INSERT INTO usuarios VALUES (1, "pepe", "url_pepe");
+INSERT INTO usuarios VALUES (1, "pepe", "url_pepe"),
+  (2, ;
 
 INSERT INTO publicaciones (foto_video_url, id_duenio, es_temporal) VALUES ("lalala", 1, 0);
 
