@@ -27,9 +27,34 @@ CREATE TABLE comentarios (id_publicacion INTEGER NOT NULL,
   FOREIGN KEY (id_stalker) REFERENCES usuarios(id_usuario), 
   PRIMARY KEY (id_publicacion, id_stalker));
 
-INSERT INTO usuarios VALUES (1, "pepe", "url_pepe"),
-  (2, ;
+INSERT INTO usuarios 
+  VALUES (1, "valen_s", ""),
+  (2, "stephanie_d", ""), 
+  (3, "mariano_di", ""),
+  (4, "an_she", ""),
+  (5, "yon_g", "");
+  
+INSERT INTO seguidores 
+  VALUES (1, 2),
+  (1,3),
+  (1,5),
+  (2,1), 
+  (2,5),
+  (5,1),
+  (5,4);
 
+INSERT INTO publicaciones (foto_video_url, id_duenio, fecha, es_temporal)
+  VALUES ("", 1, "20170117", 0),
+  ("", 1, "20170119", 1),
+  ("", 1, "20170119", 0),
+  ("", 2, "20170119", 1),
+  ("", 5, "20170118", 0),
+  ("", 5, "20170118", 0),
+  ("", 5, "20170119", 1),
+  ("", 5, "20170119", 0),
+  ("", 5, "20170119", 1),
+  
+  
 INSERT INTO publicaciones (foto_video_url, id_duenio, es_temporal) VALUES ("lalala", 1, 0);
 
   
