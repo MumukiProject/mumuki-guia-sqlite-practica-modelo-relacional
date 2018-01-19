@@ -15,7 +15,7 @@ Tenemos un modelo inicial:
           "to": { "entity": "usuarios", "column": "id_usr" },
           "type": "many_to_one"
         }
-      }
+      },
       "id_seguido": {
         "type": "Integer",
         "pk": true,
@@ -24,7 +24,7 @@ Tenemos un modelo inicial:
           "type": "many_to_one"
         }
       }
-    }
+    },
     "usuarios": {
       "id_usr": {
         "type": "Integer",
