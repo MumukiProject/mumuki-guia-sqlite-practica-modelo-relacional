@@ -1,2 +1,2 @@
 type: display
-query: select * from publicaciones p, usuarios u where p.duenio = u.id_usr and id_usr=2;
+query: select * from publicaciones p, usuarios u where p.id_duenio = u.id_usuario and id_usuario=2;
