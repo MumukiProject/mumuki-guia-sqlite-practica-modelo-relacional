@@ -8,7 +8,7 @@ Tenemos un modelo inicial:
   class='mu-erd'
   data-entities='{
     "likes": {
-      "publicacion": {
+      "id_publicacion": {
         "type": "Integer",
         "pk": true,
         "fk": {
@@ -16,11 +16,11 @@ Tenemos un modelo inicial:
           "type": "many_to_one"
         }
       },
-      "stalker": {
+      "id_stalker": {
         "type": "Integer",
         "pk": true,
         "fk": {
-          "to": { "entity": "usuarios", "column": "id_usr" },
+          "to": { "entity": "usuarios", "column": "id_usuario" },
           "type": "many_to_one"
         }
       }
@@ -33,11 +33,11 @@ Tenemos un modelo inicial:
       "foto_video_url": {
         "type": "Text"
       },
-      "duenio": {
+      "id_duenio": {
         "type": "Integer",
         "pk": false,
         "fk": {
-          "to": { "entity": "usuarios", "column": "id_usr" },
+          "to": { "entity": "usuarios", "column": "id_usuario" },
           "type": "many_to_one"
         }
       },
@@ -49,7 +49,7 @@ Tenemos un modelo inicial:
       }
     },
     "comentarios": {
-      "publicacion": {
+      "id_publicacion": {
         "type": "Integer",
         "pk": true,
         "fk": {
@@ -57,11 +57,11 @@ Tenemos un modelo inicial:
           "type": "many_to_one"
         }
       },
-      "stalker": {
+      "id_stalker": {
         "type": "Integer",
         "pk": true,
         "fk": {
-          "to": { "entity": "usuarios", "column": "id_usr" },
+          "to": { "entity": "usuarios", "column": "id_usuario" },
           "type": "many_to_one"
         }
       },
@@ -74,7 +74,7 @@ Tenemos un modelo inicial:
         "type": "Integer",
         "pk": true,
         "fk": {
-          "to": { "entity": "usuarios", "column": "id_usr" },
+          "to": { "entity": "usuarios", "column": "id_usuario" },
           "type": "many_to_one"
         }
       },
@@ -82,17 +82,17 @@ Tenemos un modelo inicial:
         "type": "Integer",
         "pk": true,
         "fk": {
-          "to": { "entity": "usuarios", "column": "id_usr" },
+          "to": { "entity": "usuarios", "column": "id_usuario" },
           "type": "many_to_one"
         }
       }
     },
     "usuarios": {
-      "id_usr": {
+      "id_usuario": {
         "type": "Integer",
         "pk": true
       },
-      "nombre_usr": {
+      "nombre_usuario": {
         "type": "Text"
       },
       "foto_perfil_url": {
