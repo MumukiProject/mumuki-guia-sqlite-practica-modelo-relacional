@@ -7,6 +7,68 @@ Tenemos un modelo inicial:
 <div
   class='mu-erd'
   data-entities='{
+    "likes": {
+      "publicacion": {
+        "type": "Integer",
+        "pk": true,
+        "fk": {
+          "to": { "entity": "publicaciones", "column": "id_publicacion" },
+          "type": "many_to_one"
+        }
+      },
+      "stalker": {
+        "type": "Integer",
+        "pk": true,
+        "fk": {
+          "to": { "entity": "usuarios", "column": "id_usr" },
+          "type": "many_to_one"
+        }
+      }
+    },
+    "publicaciones": {
+      "id_publicacion": {
+        "type": "Integer",
+        "pk": true
+      },
+      "foto_video_url": {
+        "type": "Text"
+      },
+      "duenio": {
+        "type": "Integer",
+        "pk": false,
+        "fk": {
+          "to": { "entity": "usuarios", "column": "id_usr" },
+          "type": "many_to_one"
+        }
+      },
+      "fecha": {
+        "type": "Text"
+      },
+      "es_temporal": {
+        "type": "Integer"
+      }
+    },
+    "comentarios": {
+      "publicacion": {
+        "type": "Integer",
+        "pk": true,
+        "fk": {
+          "to": { "entity": "publicaciones", "column": "id_publicacion" },
+          "type": "many_to_one"
+        }
+      },
+      "stalker": {
+        "type": "Integer",
+        "pk": true,
+        "fk": {
+          "to": { "entity": "usuarios", "column": "id_usr" },
+          "type": "many_to_one"
+        }
+      },
+      "comentario": {
+        "type": "Text"
+      }
+    },
     "seguidores": {
       "id_seguidor": {
         "type": "Integer",
@@ -35,68 +97,6 @@ Tenemos un modelo inicial:
       },
       "foto_perfil_url": {
         "type": "Text"
-      }
-    },
-    "likes": {
-      "publicacion": {
-        "type": "Integer",
-        "pk": true,
-        "fk": {
-          "to": { "entity": "publicaciones", "column": "id_publicacion" },
-          "type": "many_to_one"
-        }
-      },
-      "stalker": {
-        "type": "Integer",
-        "pk": true,
-        "fk": {
-          "to": { "entity": "usuarios", "column": "id_usr" },
-          "type": "many_to_one"
-        }
-      }
-    },
-    "comentarios": {
-      "publicacion": {
-        "type": "Integer",
-        "pk": true,
-        "fk": {
-          "to": { "entity": "publicaciones", "column": "id_publicacion" },
-          "type": "many_to_one"
-        }
-      },
-      "stalker": {
-        "type": "Integer",
-        "pk": true,
-        "fk": {
-          "to": { "entity": "usuarios", "column": "id_usr" },
-          "type": "many_to_one"
-        }
-      },
-      "comentario": {
-        "type": "Text"
-      }
-    },
-     "publicaciones": {
-      "id_publicacion": {
-        "type": "Integer",
-        "pk": true
-      },
-      "foto_video_url": {
-        "type": "Text"
-      },
-      "duenio": {
-        "type": "Integer",
-        "pk": false,
-        "fk": {
-          "to": { "entity": "usuarios", "column": "id_usr" },
-          "type": "many_to_one"
-        }
-      },
-      "fecha": {
-        "type": "Text"
-      },
-      "es_temporal": {
-        "type": "Integer"
       }
     }
   }'>
