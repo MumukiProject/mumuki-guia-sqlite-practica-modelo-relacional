@@ -59,6 +59,24 @@ Tenemos un modelo inicial:
       "es_temporal": {
         "type": "Integer"
       }
+    },
+    "likes": {
+      "publicacion":{
+        "type": "Integer",
+        "pk": true,
+        "fk": {
+          "to": { "entity": "publicaciones", "column": "id_publicacion" },
+          "type": "many_to_one"
+        }
+      },
+      "stalker":{
+        "type": "Integer",
+        "pk": true,
+        "fk": {
+          "to": { "entity": "usuarios", "column": "id_usr" },
+          "type": "many_to_one"
+        }
+      }
     }
   }'>
 </div>
