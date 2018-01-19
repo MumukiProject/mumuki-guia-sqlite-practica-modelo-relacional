@@ -52,6 +52,12 @@ Tenemos un modelo inicial:
           "to": { "entity": "usuarios", "column": "id_usr" },
           "type": "many_to_one"
         }
+      },
+      "fecha": {
+        "type": "Text"
+      },
+      "es_temporal": {
+        "type": "Integer"
       }
     }
   }'>
