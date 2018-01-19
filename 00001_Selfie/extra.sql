@@ -20,7 +20,7 @@ CREATE TABLE likes (id_publicacion INTEGER NOT NULL,
   FOREIGN KEY (id_stalker) REFERENCES usuarios(id_usuario), 
   PRIMARY KEY (id_publicacion, id_stalker));
 
-CREATE TABLE likes (id_publicacion INTEGER NOT NULL, 
+CREATE TABLE comentarios (id_publicacion INTEGER NOT NULL, 
   id_stalker INTEGER NOT NULL, 
   comentario TEXT,
   FOREIGN KEY (id_publicacion) REFERENCES publicaciones(id_publicacion), 
