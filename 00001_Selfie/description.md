@@ -37,29 +37,6 @@ Tenemos un modelo inicial:
         "type": "Text"
       }
     },
-    "publicaciones": {
-      "id_publicacion": {
-        "type": "Integer",
-        "pk": true
-      },
-      "foto_video_url": {
-        "type": "Text"
-      },
-      "duenio": {
-        "type": "Integer",
-        "pk": false,
-        "fk": {
-          "to": { "entity": "usuarios", "column": "id_usr" },
-          "type": "many_to_one"
-        }
-      },
-      "fecha": {
-        "type": "Text"
-      },
-      "es_temporal": {
-        "type": "Integer"
-      }
-    },
     "likes": {
       "publicacion": {
         "type": "Integer",
@@ -97,6 +74,29 @@ Tenemos un modelo inicial:
       },
       "comentario": {
         "type": "Text"
+      }
+    },
+     "publicaciones": {
+      "id_publicacion": {
+        "type": "Integer",
+        "pk": true
+      },
+      "foto_video_url": {
+        "type": "Text"
+      },
+      "duenio": {
+        "type": "Integer",
+        "pk": false,
+        "fk": {
+          "to": { "entity": "usuarios", "column": "id_usr" },
+          "type": "many_to_one"
+        }
+      },
+      "fecha": {
+        "type": "Text"
+      },
+      "es_temporal": {
+        "type": "Integer"
       }
     }
   }'>
