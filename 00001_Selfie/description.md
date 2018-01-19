@@ -25,7 +25,7 @@ Tenemos un modelo inicial:
     "publicaciones": {
       "id_publicacion": {
         "type": "Integer",
-        "pk": true,
+        "pk": true
       },
       "foto_video_url": {
         "type": "Text"
