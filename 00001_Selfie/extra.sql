@@ -6,7 +6,7 @@ duenio INTEGER NOT NULL,
 es_temporal BOOLEAN NOT NULL CHECK (es_temporal IN (0,1)),
 FOREIGN KEY (duenio) REFERENCES usuarios(id_usr));
 
-INSERT INTO usuarios (1, "pepe", "url_pepe");
+INSERT INTO usuarios VALUES (1, "pepe", "url_pepe");
 
 INSERT INTO publicaciones (foto_video_url, duenio, es_temporal) VALUES ("lalala", 1, 0);
 
