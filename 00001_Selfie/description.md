@@ -7,15 +7,30 @@ Tenemos un modelo inicial:
 <div
   class='mu-erd'
   data-entities='{
+    "seguidores": {
+      "id_seguidor": {
+        "type": "Integer",
+        "pk": true,
+        "fk": {
+          "to": { "entity": "usuarios", "column": "id_usr" },
+          "type": "many_to_one"
+        }
+      }
+      "id_seguido": {
+        "type": "Integer",
+        "pk": true,
+        "fk": {
+          "to": { "entity": "usuarios", "column": "id_usr" },
+          "type": "many_to_one"
+        }
+      }
+    }
     "usuarios": {
       "id_usr": {
         "type": "Integer",
         "pk": true
       },
       "nombre_usr": {
-        "type": "Text"
-      },
-      "foto_perfil_url": {
         "type": "Text"
       },
       "foto_perfil_url": {
