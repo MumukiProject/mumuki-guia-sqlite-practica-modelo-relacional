@@ -45,7 +45,8 @@ Solo con esa información, ya podemos armar un modelo inicial como este:
 
 Podemos observar distintas cosas del DER:
 
-1. Cada usuario tiene un nombre y una foto de perfil.
+1. Cada usuario tiene un nombre y una foto de perfil. (laal... :stuck_out_tongue_winking_eye:) 
 2. Un usuario puede tener muchas publicaciones, pero hay de dos tipos:
   * publicaciones temporales, más conocidas como "historias", que solo duran un día.
   * publicaciones fijas, que obviamente no son temporales y perduran por siempre (a menos que el dueño las borre... :stuck_out_tongue_winking_eye:)
+  
