@@ -11,7 +11,7 @@ CREATE TABLE seguidores (id_seguidor INTEGER NOT NULL,
 CREATE TABLE publicaciones (id_publicacion INTEGER PRIMARY KEY, 
   foto_video_url TEXT, 
   id_duenio INTEGER NOT NULL, 
-  fecha TEXT,
+  fecha TEXT NOT NULL,
   es_temporal BOOLEAN NOT NULL CHECK (es_temporal IN (0,1)),
   FOREIGN KEY (id_duenio) REFERENCES usuarios(id_usuario));
 
@@ -55,6 +55,3 @@ INSERT INTO publicaciones
   ("fotogram.com/videos/id=7", 5, date("now", "-1 days"), 1),
   ("fotogram.com/images/id=8", 5, date("now"), 0),
   ("fotogram.com/images/id=9", 5, date("now"), 1),
-  
-  
-INSERT INTO publicaciones (foto_video_url, id_duenio, es_temporal) VALUES ("lalala", 1, 0);
