@@ -1,4 +1,3 @@
 type: final_dataset
-final:SELECT id_publicacion, fecha FROM publicaciones WHERE fecha < date("2018-01-15");
+final: SELECT * FROM publicaciones WHERE fecha < date("2018-01-15");
 expected: |
-  id_publicacion|fecha
