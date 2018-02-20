@@ -1,8 +1,4 @@
 type: final_dataset
-seed: | # Opcional
-  INSERT INTO table VALUES ('dato 1');
-  INSERT INTO table VALUES ('dato 2');
 final:SELECT id_publicacion, fecha FROM publicaciones WHERE fecha < date("2018-01-15");
-  # Supongamos que el ejercicio pide insertar 'dato 3'
 expected: |
   id_publicacion|fecha
