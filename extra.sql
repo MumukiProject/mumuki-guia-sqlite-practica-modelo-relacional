@@ -29,11 +29,11 @@ CREATE TABLE comentarios (id_publicacion INTEGER NOT NULL,
   PRIMARY KEY (id_publicacion, id_stalker));
 
 INSERT INTO usuarios 
-  VALUES (1, "valen_s", ""),
-  (2, "stephanie_d", ""), 
-  (3, "mariano_di", ""),
-  (4, "an_she", ""),
-  (5, "yon_g", "");
+  VALUES (1, "valen_s", "fotogram.com/images/id=10"),
+  (2, "stephanie_d", "fotogram.com/images/id=11"), 
+  (3, "mariano_di", "fotogram.com/images/id=12"),
+  (4, "an_she", "fotogram.com/images/id=13"),
+  (5, "yon_g", "fotogram.com/images/id=14");
   
 INSERT INTO seguidores 
   VALUES (1, 2),
