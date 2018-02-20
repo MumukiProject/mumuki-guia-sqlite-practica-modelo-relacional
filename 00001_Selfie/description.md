@@ -5,6 +5,18 @@ Solo con esa información, ya podemos armar un modelo inicial como este:
 <div
   class='mu-erd'
   data-entities='{
+    "usuarios": {
+      "id_usuario": {
+        "type": "Integer",
+        "pk": true
+      },
+      "nombre_usuario": {
+        "type": "Text"
+      },
+      "foto_perfil_url": {
+        "type": "Text"
+      }
+    },
     "publicaciones": {
       "id_publicacion": {
         "type": "Integer",
@@ -26,18 +38,6 @@ Solo con esa información, ya podemos armar un modelo inicial como este:
       },
       "es_temporal": {
         "type": "Integer"
-      }
-    },
-    "usuarios": {
-      "id_usuario": {
-        "type": "Integer",
-        "pk": true
-      },
-      "nombre_usuario": {
-        "type": "Text"
-      },
-      "foto_perfil_url": {
-        "type": "Text"
       }
     }
   }'>
