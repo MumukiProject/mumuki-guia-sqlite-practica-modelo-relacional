@@ -106,6 +106,8 @@ teacher_info: |+
   > Mostrar nombre del usuario más comentario de cierta publicación.
   select nombre_usuario, comentario from comentarios, usuarios where id_stalker=id_usuario and id_publicacion = 6;
 
+  > Mostrar los nombres de los que le dieron like a cierta publicación, y cuántos likes hay.
+
 language: sqlite
 id_format: "%05d"
 order:
