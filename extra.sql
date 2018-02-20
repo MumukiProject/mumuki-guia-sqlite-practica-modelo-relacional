@@ -4,28 +4,28 @@ CREATE TABLE usuarios (id_usuario INTEGER PRIMARY KEY,
 
 CREATE TABLE seguidores (id_seguidor INTEGER NOT NULL, 
   id_seguido INTEGER NOT NULL, 
-  FOREIGN KEY (id_seguidor) REFERENCES usuarios(id_usuario), 
-  FOREIGN KEY (id_seguido) REFERENCES usuarios(id_usuario), 
+  FOREIGN KEY (id_seguidor) REFERENCES usuarios(id_usuario) ON DELETE CASCADE, 
+  FOREIGN KEY (id_seguido) REFERENCES usuarios(id_usuario) ON DELETE CASCADE, 
   PRIMARY KEY (id_seguidor, id_seguido));
 
 CREATE TABLE publicaciones (id_publicacion INTEGER PRIMARY KEY, 
   foto_video_url TEXT, 
   id_duenio INTEGER NOT NULL, 
   fecha TEXT NOT NULL,
-  es_temporal BOOLEAN NOT NULL CHECK (es_temporal IN (0,1)),
-  FOREIGN KEY (id_duenio) REFERENCES usuarios(id_usuario));
+  es_temporal INTEGER NOT NULL CHECK (es_temporal IN (0,1)),
+  FOREIGN KEY (id_duenio) REFERENCES usuarios(id_usuario) ON DELETE CASCADE);
 
 CREATE TABLE likes (id_publicacion INTEGER NOT NULL, 
   id_stalker INTEGER NOT NULL, 
-  FOREIGN KEY (id_publicacion) REFERENCES publicaciones(id_publicacion), 
-  FOREIGN KEY (id_stalker) REFERENCES usuarios(id_usuario), 
+  FOREIGN KEY (id_publicacion) REFERENCES publicaciones(id_publicacion) ON DELETE CASCADE, 
+  FOREIGN KEY (id_stalker) REFERENCES usuarios(id_usuario) ON DELETE CASCADE, 
   PRIMARY KEY (id_publicacion, id_stalker));
 
 CREATE TABLE comentarios (id_publicacion INTEGER NOT NULL, 
   id_stalker INTEGER NOT NULL, 
   comentario TEXT,
-  FOREIGN KEY (id_publicacion) REFERENCES publicaciones(id_publicacion), 
-  FOREIGN KEY (id_stalker) REFERENCES usuarios(id_usuario), 
+  FOREIGN KEY (id_publicacion) REFERENCES publicaciones(id_publicacion) ON DELETE CASCADE, 
+  FOREIGN KEY (id_stalker) REFERENCES usuarios(id_usuario) ON DELETE CASCADE, 
   PRIMARY KEY (id_publicacion, id_stalker));
 
 INSERT INTO usuarios 
@@ -54,4 +54,43 @@ INSERT INTO publicaciones
   ("fotogram.com/videos/id=6", 5, date("now", "-1 days"), 0),
   ("fotogram.com/videos/id=7", 5, date("now", "-1 days"), 1),
   ("fotogram.com/images/id=8", 5, date("now"), 0),
-  ("fotogram.com/images/id=9", 5, date("now"), 1),
+  ("fotogram.com/images/id=9", 5, date("now"), 1);
+
+INSERT INTO likes 
+  (id_publicacion, id_stalker) 
+  VALUES (1, 1),
+  (1, 2), 
+  (1, 3),
+  (3, 1),
+  (3, 3),
+  (3, 5), 
+  (6, 1),
+  (6, 2), 
+  (6, 3),
+  (6, 4)
+  (6, 5);
+
+INSERT INTO comentarios 
+  (id_publicacion, id_stalker, comentario)
+  VALUES (1, 2, "Hermoso paisaje amiga! :)"), 
+  (1, 1, "Gracias @stephanie_d, nos vemos a la vuelta ;)"),
+  
+/*
+CREATE TRIGGER borrar_dependientes_de_publicaciones
+  BEFORE DELETE ON publicaciones
+  FOR EACH ROW BEGIN
+      DELETE from likes WHERE id_publicacion = OLD.id_publicacion;
+      DELETE from comentarios WHERE id_publicacion = OLD.id_publicacion;
+  END;
+  
+
+CREATE TRIGGER borrar_dependientes_de_usuarios
+  BEFORE DELETE ON usuarios
+  FOR EACH ROW BEGIN
+      DELETE from likes WHERE id_stalker = OLD.id_usuario;
+      DELETE from comenetarios WHERE id_publicacion = OLD.id_usuario;
+      DELETE from seguidores WHERE id_seguidor = OLD.id_usuario OR id_seguido = OLD.id_usuario;
+      DELETE from publicaciones WHERE id_publicacion = OLD.id_usuario;
+      
+  END;  
+*/

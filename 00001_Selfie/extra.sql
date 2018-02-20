@@ -1,6 +1,6 @@
-CREATE TABLE usuarios (id_usuario INTEGER PRIMARY KEY, 
-  nombre_usuario TEXT, 
-  foto_perfil_url TEXT);
+DELETE FROM comentarios;
+DELETE FROM likes;
+
 
 CREATE TABLE seguidores (id_seguidor INTEGER NOT NULL, 
   id_seguido INTEGER NOT NULL, 
