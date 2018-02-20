@@ -24,7 +24,7 @@ CREATE TABLE likes (id_publicacion INTEGER NOT NULL,
 CREATE TABLE comentarios (id_publicacion INTEGER NOT NULL, 
   id_stalker INTEGER NOT NULL, 
   comentario TEXT,
-  FOREIGN KEY (id_publicacion) REFERENCES publicaciones(id_publicacion) ON DELETE CASCADE, 
+  FOREIGN KEY (id_publicacion) REFERENCES publicaciones(id_publicacion) , 
   FOREIGN KEY (id_stalker) REFERENCES usuarios(id_usuario) ON DELETE CASCADE, 
   PRIMARY KEY (id_publicacion, id_stalker));
 
