@@ -3,7 +3,7 @@ name: Práctica modelo relacional
 locale: es
 type: practice
 beta: false
-teacher_info: |
+teacher_info: |+
   <div
     class='mu-erd'
     data-entities='{
@@ -101,6 +101,11 @@ teacher_info: |
       }
     }'>
   </div>
+
+
+  > Mostrar nombre del usuario más comentario de cierta publicación.
+  select nombre_usuario, comentario from comentarios, usuarios where id_stalker=id_usuario and id_publicacion = 6;
+
 language: sqlite
 id_format: "%05d"
 order:
