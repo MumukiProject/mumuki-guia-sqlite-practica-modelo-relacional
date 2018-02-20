@@ -74,6 +74,13 @@ INSERT INTO comentarios
   (id_publicacion, id_stalker, comentario)
   VALUES (1, 2, "Hermoso paisaje amiga! :)"), 
   (1, 1, "Gracias @stephanie_d, nos vemos a la vuelta ;)"),
+  (4, 1, "Los quiero, pásenla lindo!!! <3"),
+  (6, 5, "Gracias a todos los que nos acompañaron en este éxito"),
+  (6, 2, "Son unos genios, me encantó la serie! Sigan así :)"),
+  (6, 1, "Geniooo, felicitaciones"), 
+  (6, 4, "Increíble :O");
+  
+  
   
 /*
 CREATE TRIGGER borrar_dependientes_de_publicaciones
