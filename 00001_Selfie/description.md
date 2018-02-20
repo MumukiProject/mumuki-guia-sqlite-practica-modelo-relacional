@@ -52,4 +52,4 @@ Observamos del DER que:
    
 Por último, existe la función `DATE('AAAA-MM-DD')`, que recibe un _string_ con el formato que ves, y devuelve la fecha correspondiente. 
 
-> Eliminá las publicaciones con fecha anterior al 20-02-2018. 
+> Eliminá las publicaciones con fecha anterior al 15-01-2018.
