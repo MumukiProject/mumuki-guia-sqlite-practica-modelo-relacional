@@ -2,7 +2,7 @@ type: final_dataset
 final: SELECT id_publicacion, fecha FROM publicaciones WHERE fecha < date("2018-01-15");
 expected: |
   id_publicacion|fecha
-  3|date("now", "-1 day")
-  4|date("now", "-1 day")
-  5|date("now", "-3 day")
-  6|date("now", "-1 day")
+  3|2018-02-27
+  4|2018-02-27
+  5|2018-02-27
+  6|2018-02-27
