@@ -32,9 +32,9 @@ teacher_info: "_DER COMPLETO_\n\n<div\n  class='mu-erd'\n  data-entities='{\n   
   \   \"usuarios\": {\n      \"id_usuario\": {\n        \"type\": \"Integer\",\n        \"pk\":
   true\n      },\n      \"nombre_usuario\": {\n        \"type\": \"Text\"\n      },\n
   \     \"foto_perfil_url\": {\n        \"type\": \"Text\"\n      }\n    }\n  }'>\n</div>\n\n\n<!--
-  Para modificar fechas de las publicaciones:\nUPDATE publicaciones SET fecha=date(\"2017-03-15\");\nUPDATE
+  Para modificar fechas de las publicaciones:\nUPDATE publicaciones SET fecha=date(\"2018-03-15\");\nUPDATE
   publicaciones SET fecha=date(\"2017-12-27\")  WHERE id_publicacion IN('1','2','8',
-  '9');\nUPDATE publicaciones SET fecha=date(\"2017-01-06\")  WHERE id_publicacion
+  '9');\nUPDATE publicaciones SET fecha=date(\"2018-01-06\")  WHERE id_publicacion
   = 5;\n-->\n \n> Mostrar nombre del usuario más comentario de cierta publicación.\nselect
   nombre_usuario, comentario from comentarios, usuarios where id_stalker=id_usuario
   and id_publicacion = 6;\n\n> Mostrar los nombres de los que le dieron like a cierta
