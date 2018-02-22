@@ -66,4 +66,4 @@
 
 Pero es importante mostrar también el nombre de la persona que comentó (así podemos contestarle :stuck_out_tongue_winking_eye:).
 
-> Mostrá, de la publicación con id = 8, todos los comentarios junto con el nombre del usuario que lo realizó.
+> Mostrá, de la publicación con id = 6 todos los comentarios junto con el nombre del usuario que lo realizó.

@@ -35,10 +35,8 @@ teacher_info: "_DER COMPLETO_\n\n<div\n  class='mu-erd'\n  data-entities='{\n   
   Para modificar fechas de las publicaciones:\nUPDATE publicaciones SET fecha=date(\"2018-03-15\");\nUPDATE
   publicaciones SET fecha=date(\"2017-12-27\")  WHERE id_publicacion IN('1','2','8',
   '9');\nUPDATE publicaciones SET fecha=date(\"2018-01-06\")  WHERE id_publicacion
-  = 5;\n-->\n \n> Mostrar nombre del usuario más comentario de cierta publicación.\nselect
-  nombre_usuario, comentario from comentarios, usuarios where id_stalker=id_usuario
-  and id_publicacion = 6;\n\n> Mostrar los nombres de los que le dieron like a cierta
-  publicación, y cuántos likes hay.\n\n"
+  = 5;\n-->\n \n> Mostrar los nombres de los que le dieron like a cierta publicación,
+  y cuántos likes hay.\n\n"
 language: sqlite
 id_format: "%05d"
 order:
