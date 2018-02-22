@@ -28,18 +28,6 @@
         "type": "Integer"
       }
     },
-    "usuarios": {
-      "id_usuario": {
-        "type": "Integer",
-        "pk": true
-      },
-      "nombre_usuario": {
-        "type": "Text"
-      },
-      "foto_perfil_url": {
-        "type": "Text"
-      }
-    },
     "comentarios": {
       "id_publicacion": {
         "type": "Integer",
@@ -58,6 +46,18 @@
         }
       },
       "comentario": {
+        "type": "Text"
+      }
+    },
+    "usuarios": {
+      "id_usuario": {
+        "type": "Integer",
+        "pk": true
+      },
+      "nombre_usuario": {
+        "type": "Text"
+      },
+      "foto_perfil_url": {
         "type": "Text"
       }
     }
