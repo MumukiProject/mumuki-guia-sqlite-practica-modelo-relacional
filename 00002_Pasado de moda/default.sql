@@ -1,2 +1,2 @@
---modificá esta sentencia LALALA
+--modificá esta sentencia
 /*...previousContent...*/
