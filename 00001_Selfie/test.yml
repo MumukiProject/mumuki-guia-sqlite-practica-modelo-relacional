@@ -1,5 +1,5 @@
 type: final_dataset
-final: SELECT id_publicacion, fecha FROM publicaciones WHERE fecha > date("2018-01-02");
+final: SELECT id_publicacion, fecha FROM publicaciones;
 expected: |
   id_publicacion|fecha
   3|2017-03-15
