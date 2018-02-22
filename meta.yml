@@ -31,20 +31,14 @@ teacher_info: "_DER COMPLETO_\n\n<div\n  class='mu-erd'\n  data-entities='{\n   
   \"id_usuario\" },\n          \"type\": \"many_to_one\"\n        }\n      }\n    },\n
   \   \"usuarios\": {\n      \"id_usuario\": {\n        \"type\": \"Integer\",\n        \"pk\":
   true\n      },\n      \"nombre_usuario\": {\n        \"type\": \"Text\"\n      },\n
-  \     \"foto_perfil_url\": {\n        \"type\": \"Text\"\n      }\n    }\n  }'>\n</div>\n\nPara
-  modificar fechas de las publicaciones:\nUPDATE publicaciones SET fecha=CASE\n      WHEN
-  id=1 || id=2 || id=8 || id=9 THEN date(\"2017-12-27\") \n      WHEN id=5 THEN date(\"2017-01-06\")
-  \n      ELSE date(\"2017-03-15\")  \n      END;\n\n \n  (\"fotogram.com/videos/id=3\",
-  1, date(\"now\", \"-1 days\"), 0),\n  (\"fotogram.com/images/id=4\", 2, date(\"now\",
-  \"-1 days\"), 1),\n  (\"fotogram.com/images/id=5\", 5, date(\"now\", \"-3 days\"),
-  0),\n  (\"fotogram.com/videos/id=6\", 5, date(\"now\", \"-1 days\"), 0),\n  (\"fotogram.com/videos/id=7\",
-  5, date(\"now\", \"-1 days\"), 1),\n\n  \nUPDATE publicaciones \nSET fecha = date(\"2017-12-27\")
-  \nWHERE id_publicacion NOT BETWEEN 3 AND 6;\n\nUPDATE publicaciones \nSET fecha
-  = date(\"2018-02-27\") \nWHERE id_publicacion BETWEEN 3 AND 6;\n> Mostrar nombre
-  del usuario más comentario de cierta publicación.\nselect nombre_usuario, comentario
-  from comentarios, usuarios where id_stalker=id_usuario and id_publicacion = 6;\n\n>
-  Mostrar los nombres de los que le dieron like a cierta publicación, y cuántos likes
-  hay.\n\n"
+  \     \"foto_perfil_url\": {\n        \"type\": \"Text\"\n      }\n    }\n  }'>\n</div>\n\n\n<!--
+  Para modificar fechas de las publicaciones:\nUPDATE publicaciones SET fecha=date(\"2017-03-15\");\nUPDATE
+  publicaciones SET fecha=date(\"2017-12-27\")  WHERE id_publicacion IN('1','2','8',
+  '9');\nUPDATE publicaciones SET fecha=date(\"2017-01-06\")  WHERE id_publicacion
+  = 5;\n-->\n \n> Mostrar nombre del usuario más comentario de cierta publicación.\nselect
+  nombre_usuario, comentario from comentarios, usuarios where id_stalker=id_usuario
+  and id_publicacion = 6;\n\n> Mostrar los nombres de los que le dieron like a cierta
+  publicación, y cuántos likes hay.\n\n"
 language: sqlite
 id_format: "%05d"
 order:
