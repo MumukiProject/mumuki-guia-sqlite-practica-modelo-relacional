@@ -1,4 +1,4 @@
-¡Excelente! Solo nos falta un paso... eliminar únicamente las publicaciones **temporales**.
+¡Excelente! Solo nos falta un paso... eliminar únicamente las publicaciones **temporales**. 
 
 Ya te contamos que podemos diferenciar una historia de una publicación fija por el campo `es_temporal`.
 
