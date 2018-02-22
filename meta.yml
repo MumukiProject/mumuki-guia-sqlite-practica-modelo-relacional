@@ -3,111 +3,48 @@ name: Práctica modelo relacional
 locale: es
 type: practice
 beta: false
-teacher_info: |+
-  <div
-    class='mu-erd'
-    data-entities='{
-      "likes": {
-        "id_publicacion": {
-          "type": "Integer",
-          "pk": true,
-          "fk": {
-            "to": { "entity": "publicaciones", "column": "id_publicacion" },
-            "type": "many_to_one"
-          }
-        },
-        "id_stalker": {
-          "type": "Integer",
-          "pk": true,
-          "fk": {
-            "to": { "entity": "usuarios", "column": "id_usuario" },
-            "type": "many_to_one"
-          }
-        }
-      },
-      "publicaciones": {
-        "id_publicacion": {
-          "type": "Integer",
-          "pk": true
-        },
-        "foto_video_url": {
-          "type": "Text"
-        },
-        "id_duenio": {
-          "type": "Integer",
-          "pk": false,
-          "fk": {
-            "to": { "entity": "usuarios", "column": "id_usuario" },
-            "type": "many_to_one"
-          }
-        },
-        "fecha": {
-          "type": "Text"
-        },
-        "es_temporal": {
-          "type": "Integer"
-        }
-      },
-      "comentarios": {
-        "id_publicacion": {
-          "type": "Integer",
-          "pk": true,
-          "fk": {
-            "to": { "entity": "publicaciones", "column": "id_publicacion" },
-            "type": "many_to_one"
-          }
-        },
-        "id_stalker": {
-          "type": "Integer",
-          "pk": true,
-          "fk": {
-            "to": { "entity": "usuarios", "column": "id_usuario" },
-            "type": "many_to_one"
-          }
-        },
-        "comentario": {
-          "type": "Text"
-        }
-      },
-      "seguidores": {
-        "id_seguidor": {
-          "type": "Integer",
-          "pk": true,
-          "fk": {
-            "to": { "entity": "usuarios", "column": "id_usuario" },
-            "type": "many_to_one"
-          }
-        },
-        "id_seguido": {
-          "type": "Integer",
-          "pk": true,
-          "fk": {
-            "to": { "entity": "usuarios", "column": "id_usuario" },
-            "type": "many_to_one"
-          }
-        }
-      },
-      "usuarios": {
-        "id_usuario": {
-          "type": "Integer",
-          "pk": true
-        },
-        "nombre_usuario": {
-          "type": "Text"
-        },
-        "foto_perfil_url": {
-          "type": "Text"
-        }
-      }
-    }'>
-  </div>
-
-
-  > Mostrar nombre del usuario más comentario de cierta publicación.
-  select nombre_usuario, comentario from comentarios, usuarios where id_stalker=id_usuario and id_publicacion = 6;
-
-  > Mostrar los nombres de los que le dieron like a cierta publicación, y cuántos likes hay.
-
+teacher_info: "_DER COMPLETO_\n\n<div\n  class='mu-erd'\n  data-entities='{\n    \"likes\":
+  {\n      \"id_publicacion\": {\n        \"type\": \"Integer\",\n        \"pk\":
+  true,\n        \"fk\": {\n          \"to\": { \"entity\": \"publicaciones\", \"column\":
+  \"id_publicacion\" },\n          \"type\": \"many_to_one\"\n        }\n      },\n
+  \     \"id_stalker\": {\n        \"type\": \"Integer\",\n        \"pk\": true,\n
+  \       \"fk\": {\n          \"to\": { \"entity\": \"usuarios\", \"column\": \"id_usuario\"
+  },\n          \"type\": \"many_to_one\"\n        }\n      }\n    },\n    \"publicaciones\":
+  {\n      \"id_publicacion\": {\n        \"type\": \"Integer\",\n        \"pk\":
+  true\n      },\n      \"foto_video_url\": {\n        \"type\": \"Text\"\n      },\n
+  \     \"id_duenio\": {\n        \"type\": \"Integer\",\n        \"pk\": false,\n
+  \       \"fk\": {\n          \"to\": { \"entity\": \"usuarios\", \"column\": \"id_usuario\"
+  },\n          \"type\": \"many_to_one\"\n        }\n      },\n      \"fecha\": {\n
+  \       \"type\": \"Text\"\n      },\n      \"es_temporal\": {\n        \"type\":
+  \"Integer\"\n      }\n    },\n    \"comentarios\": {\n      \"id_publicacion\":
+  {\n        \"type\": \"Integer\",\n        \"pk\": true,\n        \"fk\": {\n          \"to\":
+  { \"entity\": \"publicaciones\", \"column\": \"id_publicacion\" },\n          \"type\":
+  \"many_to_one\"\n        }\n      },\n      \"id_stalker\": {\n        \"type\":
+  \"Integer\",\n        \"pk\": true,\n        \"fk\": {\n          \"to\": { \"entity\":
+  \"usuarios\", \"column\": \"id_usuario\" },\n          \"type\": \"many_to_one\"\n
+  \       }\n      },\n      \"comentario\": {\n        \"type\": \"Text\"\n      }\n
+  \   },\n    \"seguidores\": {\n      \"id_seguidor\": {\n        \"type\": \"Integer\",\n
+  \       \"pk\": true,\n        \"fk\": {\n          \"to\": { \"entity\": \"usuarios\",
+  \"column\": \"id_usuario\" },\n          \"type\": \"many_to_one\"\n        }\n
+  \     },\n      \"id_seguido\": {\n        \"type\": \"Integer\",\n        \"pk\":
+  true,\n        \"fk\": {\n          \"to\": { \"entity\": \"usuarios\", \"column\":
+  \"id_usuario\" },\n          \"type\": \"many_to_one\"\n        }\n      }\n    },\n
+  \   \"usuarios\": {\n      \"id_usuario\": {\n        \"type\": \"Integer\",\n        \"pk\":
+  true\n      },\n      \"nombre_usuario\": {\n        \"type\": \"Text\"\n      },\n
+  \     \"foto_perfil_url\": {\n        \"type\": \"Text\"\n      }\n    }\n  }'>\n</div>\n\nPara
+  modificar fechas de las publicaciones:\nUPDATE publicaciones SET fecha=CASE\n      WHEN
+  id=1 || id=2 || id=8 || id=9 THEN date(\"2017-12-27\") \n      WHEN id=5 THEN date(\"2017-01-06\")
+  \n      ELSE date(\"2017-03-15\")  \n      END;\n\n \n  (\"fotogram.com/videos/id=3\",
+  1, date(\"now\", \"-1 days\"), 0),\n  (\"fotogram.com/images/id=4\", 2, date(\"now\",
+  \"-1 days\"), 1),\n  (\"fotogram.com/images/id=5\", 5, date(\"now\", \"-3 days\"),
+  0),\n  (\"fotogram.com/videos/id=6\", 5, date(\"now\", \"-1 days\"), 0),\n  (\"fotogram.com/videos/id=7\",
+  5, date(\"now\", \"-1 days\"), 1),\n\n  \nUPDATE publicaciones \nSET fecha = date(\"2017-12-27\")
+  \nWHERE id_publicacion NOT BETWEEN 3 AND 6;\n\nUPDATE publicaciones \nSET fecha
+  = date(\"2018-02-27\") \nWHERE id_publicacion BETWEEN 3 AND 6;\n> Mostrar nombre
+  del usuario más comentario de cierta publicación.\nselect nombre_usuario, comentario
+  from comentarios, usuarios where id_stalker=id_usuario and id_publicacion = 6;\n\n>
+  Mostrar los nombres de los que le dieron like a cierta publicación, y cuántos likes
+  hay.\n\n"
 language: sqlite
 id_format: "%05d"
 order:
