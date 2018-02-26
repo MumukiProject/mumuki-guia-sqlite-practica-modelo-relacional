@@ -36,7 +36,8 @@ teacher_info: "_DER COMPLETO_\n\n<div\n  class='mu-erd'\n  data-entities='{\n   
   publicaciones SET fecha=date(\"2017-12-27\")  WHERE id_publicacion IN('1','2','8',
   '9');\nUPDATE publicaciones SET fecha=date(\"2018-01-06\")  WHERE id_publicacion
   = 5;\n-->\n \n> Mostrar los nombres de los que le dieron like a cierta publicación,
-  y cuántos likes hay.\n\n"
+  y cuántos likes hay.\n\nSe puede agregar que un comentario sea \"respuesta\" de
+  otro comentario particular -> muchos a uno en **comentarios** con sí misma\n"
 language: sqlite
 id_format: "%05d"
 order:

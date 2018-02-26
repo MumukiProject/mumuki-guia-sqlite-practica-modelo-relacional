@@ -89,3 +89,5 @@ Así que para evitar esas repeticiones y redundancias, basta con dejar una sola 
     }
   }'>
 </div>
+
+> Consultá los IDs de todos los que siguen a "valen_s".
