@@ -7,7 +7,7 @@ Y tampoco conocemos los IDs ni los nombres de sus seguidores, con lo que necesit
 > Tomate un tiempo para tratar de entender esta resolución, y luego copiala en el editor para ver lo que devuelve.
 
 > ``` sql
-> SELECT stalker.nombre_usuario 
+> SELECT stalker.nombre_usuario AS tus_seguidores
 > FROM seguidores, 
 >      usuarios stalker, 
 >      usuarios seguido
