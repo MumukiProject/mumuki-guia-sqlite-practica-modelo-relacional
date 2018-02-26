@@ -7,11 +7,11 @@ Y tampoco conocemos los IDs ni los nombres de sus seguidores, con lo que necesit
 > Tomate un tiempo para tratar de entender esta resolución, y luego copiala en el editor para ver lo que devuelve.
 
 > ``` sql
-> SELECT stalker.nombre_usuario AS tus_seguidores
+> SELECT stalkers.nombre_usuario AS tus_seguidores
 > FROM seguidores, 
->      usuarios stalker, 
->      usuarios seguido
-> WHERE id_seguidor = stalker.id_usuario
->       AND id_seguido = seguido.id_usuario 
->       AND seguido.nombre_usuario = "valen_s";
+>      usuarios stalkers, 
+>      usuarios seguidos
+> WHERE id_seguidor = stalkers.id_usuario
+>       AND id_seguido = seguidos.id_usuario 
+>       AND seguidos.nombre_usuario = "valen_s";
 > ```
