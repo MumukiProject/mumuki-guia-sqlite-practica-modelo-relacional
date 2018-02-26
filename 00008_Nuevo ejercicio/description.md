@@ -10,8 +10,8 @@ Y tampoco conocemos los IDs ni los nombres de sus seguidores, con lo que necesit
 > SELECT stalker.nombre_usuario 
 > FROM seguidores, 
 >      usuarios stalker, 
->      usuarios u
+>      usuarios seguido
 > WHERE id_seguidor = stalker.id_usuario
->       AND u2.id_usuario = id_seguido 
->       AND u2.nombre_usuario = "valen_s";
+>       AND id_seguido = seguido.id_usuario 
+>       AND seguido.nombre_usuario = "valen_s";
 > ```
