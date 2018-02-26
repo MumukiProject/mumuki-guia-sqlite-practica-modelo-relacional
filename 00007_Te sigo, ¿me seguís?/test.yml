@@ -1,2 +1,2 @@
 type: query
-expected: SELECT id_seguidor FROM seguidores, usuarios WHERE id_usuario = id_seguido AND nombre_usuairo = "valen_s";
+expected: SELECT id_seguidor FROM seguidores, usuarios WHERE id_usuario = id_seguido AND nombre_usuario = "valen_s";
