@@ -1,0 +1,1 @@
+Pensá qué tabla maneja a los _seguidores_ y a los _seguidos_, y qué datos necesita de cada uno de ellos. :bust_in_silhouette:
