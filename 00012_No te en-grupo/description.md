@@ -9,7 +9,7 @@ SELECT id_seguido, COUNT(id_seguidor) AS cantidad_seguidores
 FROM seguidores;
 ```
 
-Pero eso nos devuelve esto:
+Eso nos devuelve esto:
 
 <div
   class='mu-sql-table'
