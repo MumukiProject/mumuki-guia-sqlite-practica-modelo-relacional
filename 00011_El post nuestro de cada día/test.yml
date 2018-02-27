@@ -2,4 +2,3 @@ type: datasets
 expected: |
   id_publicacion|id_stalker
   1|2
-  3|5
