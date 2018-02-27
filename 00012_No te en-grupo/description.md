@@ -24,8 +24,8 @@ Pero si el usuario con ID = 4 tiene 5 seguidores, podemos imaginar entonces que 
 
 > La solución está acá. Copiá esta query en el editor y mirá lo que devuelve. ¿Te imaginás qué hace la sentencia `GROUP BY`?
 
-``` sql
-SELECT id_seguido, COUNT(id_seguidor) AS seguidores
-FROM seguidores
-GROUP BY id_seguido;
-```
+> ``` sql
+> SELECT id_seguido, COUNT(id_seguidor) AS seguidores
+> FROM seguidores
+> GROUP BY id_seguido;
+> ```
