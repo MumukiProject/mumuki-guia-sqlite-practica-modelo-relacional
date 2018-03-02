@@ -14,7 +14,7 @@ Eso nos devuelve esto:
 <div
   class='mu-sql-table'
   data-name='resultado'
-  data-columns='[{"name": "id_seguido", "pk": true, "fk": true}, "seguidores"]'
+  data-columns='[{"name": "id_seguido", "pk": true, "fk": true}, "cantidad_seguidores"]'
   data-rows='[
     [4, 7]
   ]'>
@@ -25,7 +25,7 @@ Pero si el usuario con ID = 4 tiene 5 seguidores, podemos imaginar entonces que 
 > La solución está acá. Copiá esta query en el editor y mirá lo que devuelve. ¿Te imaginás qué hace la sentencia `GROUP BY`?
 
 > ``` sql
-> SELECT id_seguido, COUNT(id_seguidor) AS seguidores
+> SELECT id_seguido, COUNT(id_seguidor) AS cantidad_seguidores
 > FROM seguidores
 > GROUP BY id_seguido;
 > ```
