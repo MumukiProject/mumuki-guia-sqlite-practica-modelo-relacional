@@ -20,7 +20,7 @@ Eso nos devuelve esto:
   ]'>
 </div>
 
-Pero si el usuario con ID = 4 tiene 5 seguidores, podemos imaginar entonces que existen otros usuarios, y que deben tener seguidores también. ¿Por qué no los vemos? :confused:
+Pero si el usuario con ID = 4 tiene 7 seguidores, podemos imaginar entonces que existen otros usuarios, y que deben tener seguidores también. ¿Por qué no los vemos? :confused:
 
 > La solución está acá. Copiá esta query en el editor y mirá lo que devuelve. ¿Te imaginás qué hace la sentencia `GROUP BY`?
 
