@@ -10,4 +10,4 @@ Acá te mostramos un ejemplo para mostrar qué fecha será dentro de un mes:
 SELECT DATE('now', '+1 month');
 ```
 
-> Modificá lo que hiciste en el ejercicio anterior, para eliminar las publicaciones de _ayer_.
+> Modificá lo que hiciste en el ejercicio anterior, para eliminar las publicaciones de _ayer_ (sí, **todas** las publicaciones; después veremos cómo filtrar las temporales :stuck_out_tongue_winking_eye:)
