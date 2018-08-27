@@ -1,6 +1,6 @@
 Se está poniendo picante la cosa. :smiling_imp:
 
-> Mostrá el ID de la publicación que hizo hoy "valen_s", a la cual un seguidor suyo le dio _like_. Mostrá también el ID del seguidor. 
+> Mostrá el ID de la publicación que hizo hoy "valen_s", a la cual un seguidor suyo le dio _like_. Mostrá también el ID del stalker. 
 
 <div
   class='mu-erd'
