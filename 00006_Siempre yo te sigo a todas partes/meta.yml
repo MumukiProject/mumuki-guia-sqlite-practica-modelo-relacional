@@ -7,12 +7,16 @@ extra_visible: false
 language: text
 manual_evaluation: false
 choices:
-- value: usuarios y publicaciones
+- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+  value: usuarios y publicaciones
   checked: false
-- value: usuarios y likes
+- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+  value: usuarios y likes
   checked: false
-- value: usuarios y usuarios
+- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+  value: usuarios y usuarios
   checked: true
-- value: usuarios y comentarios
+- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
+  value: usuarios y comentarios
   checked: false
 name: Siempre yo te sigo a todas partes
