@@ -1,6 +1,6 @@
 ¿Pero qué gracia tiene hacer publicaciones si nuestros amigos o familiares no pueden comentar? :unamused:
 
-¡Agreguemosles comentarios a las publicaciones entonces! :smile: 
+¡Agreguémosle comentarios a las publicaciones entonces! :smile: 
 
 <div
   class='mu-erd'
