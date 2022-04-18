@@ -1,4 +1,4 @@
-¿Pero qué gracia tiene hacer publicaciones si nuestros amigos o familiares no pueden comentar? :unamused:
+¿Pero qué gracia tiene hacer publicaciones si nuestras amistades o familiares no pueden comentar? :unamused:
 
 ¡Agreguémosle comentarios a las publicaciones entonces! :smile: 
 
